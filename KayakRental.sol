@@ -1,3 +1,4 @@
+//Jayde Magee and Avrie White
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.8.0 <0.9.0; 
 //1. Designate License & Solidity Version
@@ -36,7 +37,7 @@ contract KayakRental {
 //5. 1/3 Public Functions
 function updateRate(uint newRate) public onlySeller {
     ratePerDay == newRate;
-    emit Log(tx.origin, "Owner updated kayak rental rate.");
+    emit Log(msg.sender, "Owner updated kayak rental rate.");
 }
 
 //5. 2/3 Public Functions
